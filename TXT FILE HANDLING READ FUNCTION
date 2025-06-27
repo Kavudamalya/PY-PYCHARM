@@ -1,0 +1,5 @@
+file=open("READ MORE.txt","r")
+data= file.readlines()
+for i in data:
+    word=i.split()
+    print(word)
