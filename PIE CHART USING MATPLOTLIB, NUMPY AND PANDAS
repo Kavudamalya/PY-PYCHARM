@@ -1,0 +1,11 @@
+import kagglehub
+import pandas as pd
+import matplotlib.pyplot as plt
+data=pd.read_excel('standard_populations_19_age_groups.xlsx')
+states= data['1940 U.S. Std Million']
+populations=data['age_group']
+plt.figure(figsize=(8,8))
+plt.pie(states,labels=populations, autopct='%1.1f%%', startangle=140)
+plt.title("US POPULATION in 1940")
+plt.axis('equal')
+plt.show()
