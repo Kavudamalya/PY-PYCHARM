@@ -1,0 +1,14 @@
+from twilio.rest import Client
+
+account_sid = 'abc'
+auth_token = 'abc123'
+twilio_number = '++1XXX'
+target_number = ['+7382XXX']
+client = Client(account_sid, auth_token)
+for i in target_number:
+    message = client.messages.create(
+        body="Heyyyy, Pet cafe date?",
+        from_=twilio_number,
+        to=i
+    )
+print("Message send! SID: ", message.sid)
